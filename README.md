@@ -6,4 +6,6 @@ Guns 'leo' and 'civ' for ap pistol and ak and removeguns (that remove all guns f
 ##
 Invencible On and Off
 ##
-Escapte to Clear Player Wanted Level
+Escape to Clear Player Wanted Level
+##
+vest and amount Ex.: vest 100, to use vest in
