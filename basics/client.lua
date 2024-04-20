@@ -73,8 +73,17 @@ RegisterCommand('vehicle', function()
 end)
 
 RegisterCommand('dv', function()
-    DeleteVehicle(vehicle)
-    notify('~g~Car deleted successful')
+    local ped = PlayerPedId()
+
+    if IsPedInAnyVehicle(ped) then
+        local vehicle1 = GetVehiclePedIsIn(ped)
+        SetEntityAsMissionEntity(vehicle1, true, true)
+        DeleteVehicle(vehicle1)
+        notify('~g~Car deleted successful')
+    else
+        notify('~r~You are not in a vehicle')
+    end
+    
 end)
 
 function notify(message)
